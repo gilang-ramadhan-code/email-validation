@@ -1,0 +1,135 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+/* VARIABLES CSS */
+:root {
+  --text-color: hsl(204, 4%, 24%);
+  --active-color: hsl(200, 70%, 56%);
+  --default-color: hsl(203, 4%, 60%);
+  --border-color: hsl(206, 4%, 64%);
+  --error-color: hsl(353, 64%, 53%);
+  --body-color: hsl(0, 0%, 100%);
+
+  --body-font: "Montserrat", sans-serif;
+
+  --smaller-font-size: 0.75rem;
+  --small-font-size: 0.813rem;
+  --normal-font-size: 1rem;
+}
+
+/* BASE */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input {
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+/* INPUT FIELD */
+.container {
+  display: grid;
+  height: 100vh;
+  margin-inline: 1.5rem;
+  place-items: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 340px;
+}
+
+.form__field {
+  position: relative;
+}
+
+.form__field::after {
+  border: 1px solid var(--border-color);
+  bottom: 0;
+  content: "";
+  height: 28px;
+  left: 3.75rem;
+  margin-block: auto;
+  position: absolute;
+  top: 0;
+}
+
+.form__label {
+  background-color: var(--body-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  left: 1.5rem;
+  padding: 2px;
+  position: absolute;
+  top: -0.65rem;
+}
+
+.form__input {
+  border: 3px solid var(--default-color);
+  border-radius: 4rem;
+  font-weight: 500;
+  outline: none;
+  padding: 1.4rem 1.4rem 1.4rem 4.5rem;
+  transition: border-color 0.4s, box-shadow 0.4s;
+  width: 100%;
+}
+
+.form__input:focus,
+.valid .form__input {
+  border-color: var(--active-color);
+  box-shadow: 0 8px 24px hsla(200, 70%, 56%, 0.3);
+}
+
+.form__input::placeholder {
+  color: var(--text-color);
+}
+
+.form__icon {
+  bottom: 0;
+  font-size: 1.5rem;
+  height: max-content;
+  left: 1.5rem;
+  margin-block: auto;
+  position: absolute;
+  top: 0;
+}
+
+.form__error {
+  align-items: center;
+  bottom: -1.5rem;
+  column-gap: 0.25rem;
+  color: var(--error-color);
+  display: flex;
+  left: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.4s;
+}
+
+.form__error i {
+  font-size: 1rem;
+}
+
+.form__error span {
+  font-size: var(--smaller-font-size);
+  font-weight: 500;
+}
+
+.invalid .form__input {
+  border-color: var(--error-color);
+  box-shadow: 0 8px 24px hsla(353, 64%, 53%, 0.3);
+}
+
+.invalid .form__error {
+  opacity: 1;
+}

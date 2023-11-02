@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="initial-scale = 1.0, width = device-width" name="viewport" />
+
+    <!-- REMIX ICON -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link href="assets/css/styles.css" rel="stylesheet" />
+
+    <title>Email Validation</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="form" id="form">
+        <div class="form__field">
+          <label for="email" class="form__label">Email Address</label>
+
+          <input
+            class="form__input"
+            id="email"
+            placeholder="Write your email"
+            required
+            type="email"
+          />
+
+          <i class="ri-mail-line form__icon"></i>
+
+          <div class="form__error">
+            <i class="ri-information-fill"></i>
+
+            <span>Invalid email format.</span>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
