@@ -3,10 +3,10 @@
 
 /* VARIABLES CSS */
 :root {
-  --text-color: hsl(204, 4%, 24%);
+  --text-color: hsl(200, 4%, 24%);
   --active-color: hsl(200, 70%, 56%);
-  --default-color: hsl(203, 4%, 60%);
-  --border-color: hsl(206, 4%, 64%);
+  --default-color: hsl(200, 4%, 60%);
+  --border-color: hsl(200, 4%, 64%);
   --error-color: hsl(353, 64%, 53%);
   --body-color: hsl(0, 0%, 100%);
 
